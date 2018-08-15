@@ -1,5 +1,4 @@
 import vgg
-
 import tensorflow as tf
 import numpy as np
 
