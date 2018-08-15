@@ -1,7 +1,9 @@
+#這份是用來讀取VGG-19神經網絡，用於建構Neural Style模型
 import tensorflow as tf
 import numpy as np
 import scipy.io
-
+#要先下載這份要調用的imagenet-vgg-verydeep-19.mat
+#VGG19要用到的NN層
 VGG19_LAYERS = (
     'conv1_1', 'relu1_1', 'conv1_2', 'relu1_2', 'pool1',
 
@@ -16,7 +18,7 @@ VGG19_LAYERS = (
     'conv5_1', 'relu5_1', 'conv5_2', 'relu5_2', 'conv5_3',
     'relu5_3', 'conv5_4', 'relu5_4'
 )
-
+#需要的資訊是每層NN的kernels和bias
 def load_net(data_path):
     data = scipy.io.loadmat(data_path)
     if not all(i in data for i in ('layers', 'classes', 'normalization')):
