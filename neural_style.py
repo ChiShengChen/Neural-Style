@@ -1,3 +1,6 @@
+#這份是外部接口函數，
+#定義了函數的主要參數以及部分參數的默認值，包含對圖像的讀取和存貯，對輸入圖像進行resize，權值分配等操作，
+#並將參數以及resize的圖片傳入stylize. py中
 import os
 
 import numpy as np
